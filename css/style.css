@@ -42,6 +42,9 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -57,6 +60,9 @@ body {
   background-color: white;
   box-shadow: var(--box-shadow);
   min-height: 60rem; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      margin: 0 auto; } }
 
 .header {
   font-size: 1.4rem;
@@ -69,6 +75,9 @@ body {
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--grey-dark-1);
@@ -86,6 +95,12 @@ body {
   padding: 4.5rem;
   background-color: var(--grey-light-1);
   border-bottom: var(--line); }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 3.5rem; } }
+  @media only screen and (max-width: 46.875em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   flex: 0 0 60%;
@@ -93,6 +108,12 @@ body {
   background-color: white;
   box-shadow: var(--shadow-light);
   padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      margin-right: 3.5rem; } }
+  @media only screen and (max-width: 46.875em) {
+    .description {
+      margin-right: 0; } }
 
 .user-reviews {
   flex: 1;
@@ -173,10 +194,20 @@ body {
   list-style: none;
   text-transform: uppercase;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin: 0; } }
     .side-nav__item::before {
       content: "";
       width: .3rem;
@@ -200,17 +231,32 @@ body {
     padding: 1.5rem 3.5rem;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem 0; } }
+    @media only screen and (max-width: 46.875em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     fill: currentColor;
     margin-right: 2rem; }
+    @media only screen and (max-width: 46.875em) {
+      .side-nav__icon {
+        margin: 0 0 .5rem; } }
 
 .legal {
   font-size: 1.2rem;
   text-align: center;
   color: var(--grey-light-4);
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -228,6 +274,9 @@ body {
     text-transform: uppercase;
     padding: 1.5rem 3rem;
     letter-spacing: 1px; }
+    @media only screen and (max-width: 46.875em) {
+      .overview__heading {
+        font-size: 1.75rem; } }
   .overview__stars {
     display: flex;
     margin-right: auto; }
@@ -250,10 +299,17 @@ body {
     margin-left: 3rem;
     padding: 0 2.25rem;
     align-self: stretch; }
+    @media only screen and (max-width: 46.875em) {
+      .overview__rating {
+        padding: 0 1.75rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px; }
+    @media only screen and (max-width: 46.875em) {
+      .overview__rating-average {
+        font-size: 1.75rem;
+        margin-bottom: 0; } }
   .overview__rating-count {
     font-size: .8rem;
     text-transform: uppercase; }
@@ -320,6 +376,8 @@ body {
     font-size: 1.3rem;
     color: var(--grey-dark-3);
     margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -336,6 +394,11 @@ body {
   box-shadow: var(--shadow-light);
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 46.875em) {
+    .review {
+      align-self: stretch; }
+      .review:not(:last-of-type) {
+        margin: 3.5rem 0; } }
   .review::before {
     content: "\201C";
     font-family: sans-serif;
@@ -363,9 +426,15 @@ body {
       font-size: 1.1rem;
       text-transform: uppercase;
       font-weight: 600; }
+      @media only screen and (max-width: 56.25em) {
+        .review__user__name {
+          font-size: 1.3rem; } }
     .review__user__date {
       font-size: 1rem;
       color: var(--grey-dark-3); }
+      @media only screen and (max-width: 56.25em) {
+        .review__user__date {
+          font-size: 1.2rem; } }
     .review__user__rating {
       font-size: 2.2rem;
       color: var(--color-primary);
@@ -379,6 +448,9 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 46.875em) {
+      .cta__heading {
+        margin: 0 2rem 2.5rem; } }
   .cta__btn {
     border: none;
     font-size: 1.5rem;

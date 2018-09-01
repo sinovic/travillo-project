@@ -113,11 +113,25 @@
   text-transform: uppercase;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $large) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
+    @media only screen and (max-width: $large) {
+      flex: 1;
+    }
+
+
     &:not(:last-child) {
       margin-bottom: .5rem;
+
+      @media only screen and (max-width: $large) {
+        margin: 0;
+      }
     }
 
     &::before {
@@ -157,6 +171,17 @@
 
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $large) {
+      justify-content: center;
+      padding: 2rem 0;
+    }
+
+    @media only screen and (max-width: $medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__icon {
@@ -164,6 +189,10 @@
     height: 1.75rem;
     fill: currentColor; // color of parent element
     margin-right: 2rem;
+
+    @media only screen and (max-width: $medium) {
+      margin: 0 0 .5rem;
+    }
   }
 }
 
@@ -173,6 +202,10 @@
   text-align: center;
   color: var(--grey-light-4);
   padding: 2rem;
+
+  @media only screen and (max-width: $large) {
+    display: none;
+  }
 }
 
 
@@ -204,6 +237,10 @@
     text-transform: uppercase;
     padding: 1.5rem 3rem;
     letter-spacing: 1px;
+
+    @media only screen and (max-width: $medium) {
+      font-size: 1.75rem;
+    }
   }
 
   &__stars {
@@ -237,12 +274,21 @@
     margin-left: 3rem;
     padding: 0 2.25rem;
     align-self: stretch;
+
+    @media only screen and (max-width: $medium) {
+      padding: 0 1.75rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+
+    @media only screen and (max-width: $medium) {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+    }
   }
 
   &__rating-count {
@@ -342,7 +388,9 @@
     margin-right: auto;
   }
 
-  &__frends {}
+  &__friends {
+    display: flex;
+  }
 
   &__photo {
     box-sizing: content-box;
@@ -365,6 +413,14 @@
   box-shadow: var(--shadow-light);
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: $medium) {
+    align-self: stretch;
+
+    &:not(:last-of-type) {
+      margin: 3.5rem 0;
+    }
+  }
 
   &::before {
     content: "\201C";
@@ -402,11 +458,19 @@
       font-size: 1.1rem;
       text-transform: uppercase;
       font-weight: 600;
+
+      @media only screen and (max-width: $large) {
+        font-size: 1.3rem;
+      }
     }
 
     &__date {
       font-size: 1rem;
       color: var(--grey-dark-3);
+
+      @media only screen and (max-width: $large) {
+        font-size: 1.2rem;
+      }
     }
 
     &__rating {
@@ -427,6 +491,10 @@
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: $medium) {
+      margin: 0 2rem 2.5rem;
+    }
   }
 
   &__btn {
